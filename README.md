@@ -1,2 +1,2 @@
 # CloudAzureDevOpsAutomation
-Internal Pyython Azure DevOps Automation Projects
+Internal Python Azure DevOps Automation Projects
