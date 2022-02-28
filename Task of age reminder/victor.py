@@ -103,7 +103,7 @@ for x in query_results.work_items:
 
     idNum = str(y.id)
 
-    url = "https://dev.azure.com/cbts-internal/Cloud-Transformation/_workitems/edit/" + idNum +"/"
+    url = "https://dev.azure.com/Org/Project/_workitems/edit/" + idNum +"/"
 
     title = y.fields['System.Title']
 
@@ -115,7 +115,7 @@ for x in query_results.work_items:
         'Email': email,
         'Title': title,
         'Priority': priority,
-        'Url': "https://dev.azure.com/cbts-internal/Cloud-Transformation/_workitems/edit/" + idNum +"/"
+        'Url': "https://dev.azure.com/Org/Project/_workitems/edit/" + idNum +"/"
     }
 
     work_items.append(dict(tmp))
@@ -141,7 +141,7 @@ for name in names:
         if item['Name'] == name:
             count += 1
             emails = str(item['Email']) #Group email
-            print("EMAILLLLLS"+emails)
+            print("EMAILS: "+emails)
             result = "\n-----------------------------------------------------------------------------------------------------------------------------\n"+"Assigned to: "+ str(item['Name']) + "\nItem number: "+ str(count) + "\nTitle: " + str(item['Title']) + "\nPriority: " + str(item['Priority']) + "\nLink: " + str(item['Url'])
             print(result)    
             
